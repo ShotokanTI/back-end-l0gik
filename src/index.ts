@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors'
 import {createConnection} from 'typeorm'
 
-import userRoutes from './routes/user.routes'
+import userRoutes from './routes/series.routes'
 
 const app = express();
 createConnection();

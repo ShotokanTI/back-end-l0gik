@@ -22,7 +22,14 @@ router.post("/Series",
   messagesErrors,
   createSeries);
 
-router.put("/Series/:id", updateSeries);
+  router.put("/statusSerie/:id",
+  updateSeries);
+
+router.put("/Series/:id",
+  multer(multerConfig).single('File'),
+  validation,
+  messagesErrors,
+  updateSeries);
 router.delete("/Series/:id", deleteSeries);
 
 export default router;
